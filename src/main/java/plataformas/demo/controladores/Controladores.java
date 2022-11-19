@@ -20,6 +20,11 @@ public class Controladores {
     UsuarioRepo usuarioRepo;
     
     //@PostMapping("/login")
+    //raul, le puse el mapgin al get porque cuando lo ejecutaba en localhost:8080 me sacaba error
+    @GetMapping("/")
+    public String holaquetal(){
+        return "Hola que tal";
+    }
 
     @PostMapping("/registro")
     public ResponseEntity<Usuario> registro(@RequestBody Usuario usuario) throws Exception{
